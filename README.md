@@ -1,28 +1,28 @@
 # sparkMachineLearning
-Proje Özeti: Veri Ön İşleme ve Modelleme
-Veri Hazırlığı ve Temizliği:
+Project Summary: Data Preprocessing and Modeling
+Data Preparation and Cleaning:
 
-Eksik Değerlerin İmpütasyonu: Verisetindeki total_bedrooms özelliğinde eksik değerler vardı. Bu eksiklikler, PySpark’ın Imputer fonksiyonu kullanılarak dolduruldu.
-Öznitelik Seçimi ve Dönüştürme: Kullanılacak özellikler belirlenip, gereksiz veya düşük etki gösteren özellikler çıkarıldı. Bu süreç, modelin doğruluğunu artırmak için önemlidir.
-Öznitelik Kodlama:
+Imputing Missing Values: Missing values in the total_bedrooms feature were handled using PySpark’s Imputer function.
+Feature Selection and Transformation: Relevant features were selected, and irrelevant or low-impact features were removed. This process is crucial for improving model accuracy.
+Feature Encoding:
 
-Kategorik Verilerin Kodlanması: ocean_proximity gibi kategorik değişkenler için StringIndexer ve OneHotEncoder kullanılarak sayısal verilere dönüştürüldü. Bu, modellerin kategorik verilerle etkili çalışmasını sağlar.
-Öznitelik Ölçekleme ve Vektörleştirme:
+Encoding Categorical Variables: Categorical variables such as ocean_proximity were converted into numerical values using StringIndexer and OneHotEncoder. This ensures that models can work effectively with categorical data.
+Feature Scaling and Vectorization:
 
-Öznitelik Vektörleştirme: Modelin daha verimli çalışması için sayısal öznitelikler, PySpark’ın VectorAssembler fonksiyonu ile birleştirildi. Bu, tüm sayısal özelliklerin tek bir vektör halinde işlenmesini sağladı.
-Pipeline Yapısı:
+Feature Vectorization: Numerical features were combined into a single vector using PySpark’s VectorAssembler function. This allows the model to process all numerical features together efficiently.
+Pipeline Structure:
 
-Pipeline Kullanımı: Veri ön işleme ve modelleme adımlarını sırasıyla otomatikleştirmek için PySpark’ın Pipeline sınıfı kullanıldı. Bu, her model için aynı veri işleme adımlarını tekrar etmeyi sağladı.
-Modelleme ve Değerlendirme:
+Using Pipeline: PySpark’s Pipeline class was used to automate the sequence of data preprocessing and modeling steps. This allowed for consistency and efficiency across models.
+Modeling and Evaluation:
 
-Çeşitli Modellerin Denenmesi: Linear Regression, Random Forest, GBTRegressor ve Generalized Linear Regression gibi farklı modeller test edildi. Bu modellerin her biri, CrossValidator ile çapraz doğrulama yöntemine tabi tutuldu.
-Hiperparametre Ayarı (GridSearch): Modellerin performansını optimize etmek için, ParamGridBuilder ve CrossValidator kullanılarak hiperparametre ayarlamaları yapıldı.
-Model Performansının Değerlendirilmesi:
+Testing Different Models: Various models such as Linear Regression, Random Forest, GBTRegressor, and Generalized Linear Regression were tested. These models were evaluated using the CrossValidator method for cross-validation.
+Hyperparameter Tuning (GridSearch): To optimize the performance of the models, hyperparameters were tuned using ParamGridBuilder and CrossValidator.
+Model Performance Evaluation:
 
-RMSE ve R² Değerleri: Her model için hata oranı ve doğruluk performansı, RMSE ve R² metrikleri ile değerlendirildi. Bu metrikler, her modelin doğruluğunu ve genel performansını anlamaya yardımcı oldu.
-Sonuçların Görselleştirilmesi:
+RMSE and R² Metrics: Each model's performance was evaluated using the RMSE and R² metrics. These metrics helped assess the accuracy and overall performance of the models.
+Visualization of Results:
 
-Performans Karşılaştırması: Modellerin RMSE ve R² değerleri, bir çubuk grafik ve çizgi grafiği kullanılarak görselleştirildi. Böylece, her modelin performansı açıkça karşılaştırılabilir hale getirildi.
-Modelin Kaydedilmesi ve Yüklenmesi:
+Performance Comparison: The RMSE and R² values for each model were visualized using bar and line charts. This made it easier to compare the performance of each model.
+Saving and Loading the Model:
 
-En İyi Modelin Seçimi ve Kaydedilmesi: Performans sonuçlarına göre en iyi model olan GBTRegressor kaydedildi. Bu model, gelecekte yeniden kullanılmak üzere bir dizine save() fonksiyonu ile kaydedildi.
+Selecting and Saving the Best Model: Based on performance results, the best model, GBTRegressor, was saved. This model was stored in a directory using the save() function for future use.
