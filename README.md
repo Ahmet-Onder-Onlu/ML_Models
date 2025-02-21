@@ -1,6 +1,6 @@
-# sparkMachineLearning
+# sparkMachineLearning House Price Prediction
 Project Summary: Data Preprocessing and Modeling
-Data Preparation and Cleaning:
+Data Preparation and Cleaning for House Price Prediction:
 
 Imputing Missing Values: Missing values in the total_bedrooms feature were handled using PySpark’s Imputer function.
 Feature Selection and Transformation: Relevant features were selected, and irrelevant or low-impact features were removed. This process is crucial for improving model accuracy.
@@ -29,7 +29,7 @@ Selecting and Saving the Best Model: Based on performance results, the best mode
 
 ...
 
-#tsfresh_stock_analyse_model_train
+#tsfresh_stock_analyse_model_train Stock Sector Classification
 Project Summary: Sectoral Similarity Analysis and Classification Model for Stocks
 1. Data Collection
 Stock returns data from 2005 onwards was collected using libraries such as yfinance, investpy, and quandl.
